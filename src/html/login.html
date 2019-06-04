@@ -1,0 +1,93 @@
+<a href="#" data-toggle="modal" data-target="#myModal" title="网易严选登录" class="login">
+                                    登录
+                              </a>
+
+<div class="modal fade login-m" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title active" id="myModalLabel"><a href="">手机号登录</a> </h4>
+            <h4 class="modal-title" id="myModalLabel">
+                <a href="">邮箱登录</a> </h4>
+
+
+            <div class="l-conform show" data-type="tabs">
+                <a href="#mes-l" class="u-todo"> 使用短信验证登录</a>
+                <form action="../../lib/login.php" method="POST" id="psw-l" class="l-form  show">
+
+                    <div class="name-l">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <input type="text" placeholder="请输入手机号" id="phone" name="phone">
+                        <span class="phone"></span>
+                    </div>
+                    <div class="name-l">
+                        <i class="glyphicon glyphicon-lock"></i>
+
+                        <input type="password" id="password" name="password" placeholder="请输入密码">
+                        <span class="password"></span>
+                    </div>
+                    <input class="btn btn-default" type="submit" value="登录" class="sub">
+                </form>
+                <a href="#pws-l" class="u-todo"> 使用密码验证登录</a>
+                <form action="../../lib/login.php" method="POST" id="mes-l" class="show l-form">
+                    <div class="name-l">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <input type="text" placeholder="请输入手机号" id="phone" name="phone">
+                        <span class="phone"></span>
+                    </div>
+                    <div class="pic-l">
+                        <div> <i class="glyphicon glyphicon-arrow-right"></i></div>
+                        <input type="text" placeholder="向右拖动滑块填充拼图" id="pic" name="picture" disabled>
+                    </div>
+                    <div class="psw-l">
+                        <input type="password" id="info" name="information" placeholder="请输入短信验证码">
+                        <button class="getms"><a href=""> 获取验证码</a></button>
+                        <span class="information"></span>
+                    </div>
+                    <input class="btn btn-default" type="submit" value="登录">
+                </form>
+
+            </div>
+
+            <div class="l-conform" data-type="tabs">
+                <form action="../../lib/login.php" method="POST" class="l-form">
+
+                    <div class="name-l">
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <input type="text" placeholder="邮箱账号" id="email" name="email">
+                        <span class="email"></span>
+                    </div>
+                    <div class="name-l">
+                        <i class="glyphicon glyphicon-lock"></i>
+
+                        <input type="password" id="password" name="password" placeholder="请输入密码">
+                        <span class="password"></span>
+                    </div>
+                    <input class="btn btn-default" type="submit" value="登录">
+                </form>
+            </div>
+            <div class="fList">
+                <a href="#" target="_blank" class>
+
+                </a>
+                <a href="#" target="_blank"></a>
+                <a href="#" target="_blank"></a>
+                <a href="#" target="_blank"></a>
+            </div>
+            <div class="fQues show" data-type="tabs">
+                <a href="">手机快捷注册</a>
+                <a href="#" target="_blank">遇到问题?</a>
+            </div>
+            <div class="fQues" data-type="tabs">
+                <a href="#" target="_blank">邮箱注册</a>
+                <a href="#" target="_blank">忘记密码?</a>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</div>

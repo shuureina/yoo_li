@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/product.min.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../lib/cookie.js"></script>
+    <script>
+        $(function() {
+
+            var id = location.search.split('=')[1];
+
+            var scale = $('.scale'),
+                small = $('.small'),
+                movebox = $('.movebox'),
+                big = $('.big'),
+                bigpic = $('.bigpic');
+
+            $.ajax({
+                type: "get",
+                url: "../../lib/getItem.php",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(response) {
+
+                    var pic = JSON.parse(response.pic);
+                    var template = `
+
+                                    <div class="wrapper">
+                                        <div class="product">
+                                            <div class="pic">
+                                                <div class="scale">
+                                                    <div class="small">
+                                                        <img src="${pic[0].src}" class="smallpic">
+                                                        <div class="movebox"></div>
+                                                    </div>
+                                                    <div class="big">
+                                                        <img src="${pic[0].src}" class="bigpic">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-title">
+                                                <h3>${response.title}</h3>
+                                                <p class="price">
+                                                    <span class="yuan">￥</span>${response.price}
+                                                </p>
+                                                <div class="num">
+                                                    库存：${response.num}
+                                                </div>
+                                                <input type="number" value="0" min="1" max="${response.num}" id="num">
+                                          
+                                                <input type="button" class="add" value="加入购物车">
+                                            </div>
+                                        </div>
+                                        <div class="delaitls">
+                                            <h2>${response.title}</h2>
+                                          ${response.details}
+                                        </div>
+                                    </div>
+
+                                                 `;
+                    $('body').append(template).find('.add').on('click', function() {
+                        addShopCar(response.id, response.price, $('#num').val());
+                    });
+
+                    function addShopCar(id, price, num) {
+                        var shop = cookie.get('shop');
+                        var product = {
+                            "id": id,
+                            " price": price,
+                            "num": num
+                        };
+                        if (shop) {
+                            shop = JSON.parse(shop);
+
+                            if (shop.some(elm => elm.id == id)) {
+                                shop.forEach(function(elm, i) {
+                                    elm.id == id ? elm.num = num : null;
+                                });
+                            } else {
+
+                                shop.push(product);
+                            }
+                            cookie.set('shop', JSON.stringify(shop), 1);
+                        } else {
+                            shop = [];
+                            shop.push(product);
+                            cookie.set('shop', JSON.stringify(shop), 1);
+                        }
+                    }
+                    $('body').on('click', '.add', function() {
+                        $('body').load('./shopcar.html', function() {
+
+                        })
+                    });
+
+
+                }
+            });
+            // $('body').on('click', '.add', function() {
+
+            //     })
+            // $('body').on('mouseover', '.small', function() {
+            //     movebox.removeClass('hide').addClass('show');
+            //     big.removeClass('hide').addClass('show');
+
+
+
+            //     $('body').on('mousemove', function(e) {
+            //         var pageX = e.pageX;
+            //         var pageY = e.pageY;
+            //         var offsetX = $('.small').width();
+            //         var offsetY = $('.small').height();
+            //         var relativeX = pageX - offsetX;
+            //         var relativeY = pageY - offsetY;
+
+            //         var magOffsetX = $('.movebox').width() / 4;
+            //         var magOffsetY = $('.movebox').height() / 4;
+            //         $('.movebox').css({
+            //             left: relativeX - magOffsetX + 'px',
+            //             top: relativeY - magOffsetY + 'px',
+            //             width: $('.small').width() * $('.big').width() / $('.bigpic').width(),
+            //             height: $('.small').height() * $('.big').height() / $('.bigpic').height()
+            //         });
+
+            //         var magX = $('.movebox').position().left;
+            //         var magY = $('.movebox').position().top;
+
+
+
+            //         // 确定边界
+            //         var maxMagX = $('.samll').width() - $('.movebox').width()
+            //         var maxMagY = $('.samll').height() - $('.movebox').height()
+            //             // 左边界
+            //         if (magX <= 0) {
+            //             $('.movebox').css('left', '0px');
+            //         }
+            //         // 右边界
+            //         if (magX >= maxMagX) {
+            //             $('.movebox').css('left', maxMagX + 'px');
+            //         }
+            //         // 上边界
+            //         if (magY <= 0) {
+            //             $('.movebox').css('top', '0px');
+            //         }
+            //         // 下边界 
+            //         if (magY >= maxMagY) {
+            //             $('.movebox').css('top', maxMagY + 'px');
+            //         }
+
+            //         var originX = magX * 4;
+            //         var originY = magY * 4;
+            //         $('.bigpic').css({
+            //             left: -originX + 'px',
+            //             top: -originY + 'px'
+            //         });
+            //     });
+            // });
+
+            // $('body').on('mouseout', function() {
+            //     movebox.removeClass('show').addClass('hide');
+            //     big.removeClass('show').addClass('hide');
+            // });
+
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- <div class="wrapper">
+        <div class="product">
+            <div class="pic">
+                <div class="scale">
+                    <div class="small">
+                        <img src="./img/7.png" class="smallpic">
+                        <div class="movebox"></div>
+                    </div>
+                    <div class="big">
+                        <img src="./img/7.png" class="bigpic">
+                    </div>
+                </div>
+            </div>
+            <div class="p-title">
+                <h3>titile</h3>
+                <p class="price">
+                    <span class="yuan">￥</span>29
+                </p>
+                <div class="num">
+                    库存：88
+                </div>
+                <input type="number" value="0" min="1" max="5" id="num">
+                <input type="button" class="add" value="加入购物车">
+            </div>
+        </div>
+        <div class="delaitls">
+            <h2>商品详情</h2>
+            <ul>
+                <li><span>原材料资质说明</span><span>针对产品所涉及的主要原材料，我们将公示其安全性的相关资质证明。原料包含：三文鱼（国产）、鲣鱼（国产）、金枪鱼（国产）、沙丁鱼（国产）、鳕鱼（进口）、鳀鱼（国产）、青鱼（国产）、鸡肉（国产）、脱水鱼粉（进口）、脱水鸡肉粉（进口）；公示资质包含：进出口登记证、外检报告、第三方检测报告、检验检疫证明。相关材料将在“质检报告”模块进行公示。</span></li>
+                <li><span>商品名称</span><span>全价猫粮</span></li>
+                <li><span>适用猫龄</span><span>全期</span></li>
+                <li><span>净含量</span><span>1.8KG</span></li>
+                <li><span>保质期</span><span>12个月</span></li>
+                <li><span>生产商</span><span>宣城市福贝宠物食品有限公司</span></li>
+                <li><span>产地</span><span>安徽省宣城市</span></li>
+                <li><span>配料表</span><span>原料组成：冻肉（三文鱼、鲣鱼、金枪鱼、沙丁鱼、鳕鱼、鳀鱼、青鱼、鸡肉）、脱水鱼粉、脱水鸡肉粉、鸡油、马铃薯、木薯、豌豆、啤酒酵母、全蛋粉、奶酪粉、甜菜纤维、燕麦草、鱼油、胡萝卜、苹果、蔓越莓、海藻、丝兰提取物<br>添加剂组成：卵磷脂、牛磺酸、氯化胆碱、DL-蛋氨酸、L-赖氨酸、复合维生素及螯合矿物质、迷迭香、果寡糖、益生菌等</span></li>
+                <li><span>营养分析保证值</span><span>粗蛋白质≥41%； 粗脂肪≥16%； 粗纤维≤5.0%； 粗灰分≤10%； 水分≤10%； 钙≥1.1%； 总磷≥1.0%； 水溶性氯化物（以Cl-计）≥0.3%； 牛磺酸≥0.2%</span></li>
+                <li><span>贮存条件</span><span>请于阴凉干燥处保存，为保持良好的风味和新鲜度，开袋后请及时封口。如发现霉变等异常现象，请勿喂食。</span></li>
+                <li><span>温馨提示</span><span>1.为了您爱宠的肠胃健康，请根据换粮提示科学换粮。<br>2.片状原料为脱水鱼肉片，可提高产品适口性，猫咪可安心食用。<br>3.产品包装无需使用其他工具，请按照包装提示撕开包装密封条。使用刀剪可能会破坏密封条结构导致密封条失效。</span></li>
+            </ul>
+
+        </div>
+    </div> -->
+
+</body>
+
+</html>

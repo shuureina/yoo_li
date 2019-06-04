@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网易严选-以严谨的态度，为中国消费者甄选天下优品</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/you-reset.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/you-header+footer.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/yoo-HomePage.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.min.css">
+
+
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+
+        <!-- 头部的登录栏导航 -->
+        <div class="top-nav">
+            <div class="wrapper">
+                <div class="left-tnav">
+                    <a href="#">上网易严选用银行闪付-5月特惠【最高减99元】</a>
+                </div>
+                <div class="right-tnav">
+                    <ul class="list-rt">
+                        <li class="list-login">
+                            <a href="#" data-toggle="modal" data-target="#myModal" title="网易严选登录" class="login">
+                                登录
+                          </a>
+
+                            <div class="modal fade login-m" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title active" id="myModalLabel"><a href="">手机号登录</a> </h4>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            <a href="">邮箱登录</a> </h4>
+
+
+                                        <div class="l-conform show" data-type="tabs">
+                                            <a href="#mes-l" class="u-todo"> 使用短信验证登录</a>
+                                            <form action="../../lib/login.php" method="POST" id="psw-l" class="l-form  show">
+
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-phone"></i>
+                                                    <input type="text" placeholder="请输入手机号" id="phone" name="phone">
+                                                    <span class="phone"></span>
+                                                </div>
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+
+                                                    <input type="password" id="password" name="password" placeholder="请输入密码">
+                                                    <span class="password"></span>
+                                                </div>
+                                                <input class="btn btn-default" type="submit" value="登录" class="sub">
+                                            </form>
+                                            <a href="#pws-l" class="u-todo"> 使用密码验证登录</a>
+                                            <form action="../../lib/login.php" method="POST" id="mes-l" class="show l-form">
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-phone"></i>
+                                                    <input type="text" placeholder="请输入手机号" id="phone" name="phone">
+                                                    <span class="phone"></span>
+                                                </div>
+                                                <div class="pic-l">
+                                                    <div> <i class="glyphicon glyphicon-arrow-right"></i></div>
+                                                    <input type="text" placeholder="向右拖动滑块填充拼图" id="pic" name="picture" disabled>
+                                                </div>
+                                                <div class="psw-l">
+                                                    <input type="password" id="info" name="information" placeholder="请输入短信验证码">
+                                                    <button class="getms"><a href=""> 获取验证码</a></button>
+                                                    <span class="information"></span>
+                                                </div>
+                                                <input class="btn btn-default" type="submit" value="登录">
+                                            </form>
+
+                                        </div>
+
+                                        <div class="l-conform" data-type="tabs">
+                                            <form action="../../lib/login.php" method="POST" class="l-form">
+
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-phone"></i>
+                                                    <input type="text" placeholder="邮箱账号" id="email" name="email">
+                                                    <span class="email"></span>
+                                                </div>
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+
+                                                    <input type="password" id="password" name="password" placeholder="请输入密码">
+                                                    <span class="password"></span>
+                                                </div>
+                                                <input class="btn btn-default" type="submit" value="登录">
+                                            </form>
+                                        </div>
+                                        <div class="fList">
+                                            <a href="#" target="_blank" class>
+
+                                            </a>
+                                            <a href="#" target="_blank"></a>
+                                            <a href="#" target="_blank"></a>
+                                            <a href="#" target="_blank"></a>
+                                        </div>
+                                        <div class="fQues show" data-type="tabs">
+                                            <a href="">手机快捷注册</a>
+                                            <a href="#" target="_blank">遇到问题?</a>
+                                        </div>
+                                        <div class="fQues" data-type="tabs">
+                                            <a href="#" target="_blank">邮箱注册</a>
+                                            <a href="#" target="_blank">忘记密码?</a>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="list-login">
+                            <a href="#" data-toggle="modal" data-target="#myModal" class="login">注册</a>
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title active active-i" id="myModalLabel">手机号注册 </h4>
+                                        <h4 class="modal-title active active-i" id="myModalLabel">
+                                            <a href="">邮箱登录</a> <a href="">直接登录</a></h4>
+
+
+                                        <div class="l-conform show" data-type="tabs">
+
+                                            <form action="" method="POST" id="mes-l" class="show l-form">
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-phone"></i>
+                                                    <input type="text" placeholder="请输入手机号" id="name" name="username">
+                                                </div>
+                                                <div class="pic-l">
+                                                    <div> <i class="glyphicon glyphicon-arrow-right"></i></div>
+                                                    <input type="text" placeholder="向右拖动滑块填充拼图" id="pic" name="picture" disabled>
+                                                </div>
+                                                <div class="psw-l">
+                                                    <input type="password" id="psw" name="password" placeholder="请输入短信验证码">
+                                                    <button class="getms"><a href=""> 获取验证码</a></button>
+                                                </div>
+                                                <div class="name-l">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+
+                                                    <input type="password" id="psw" name="password" placeholder="请输入密码">
+                                                </div>
+                                                <input class="btn btn-default" type="submit" value="注册">
+                                            </form>
+
+
+
+                                        </div>
+
+
+                                        <div class="fQues show" data-type="tabs">
+                                            <input type="checkbox" id="agree" class="agree">
+                                            <label for="agree"> 我同意 <a href="">《服务条款》</a>和
+                                                <a href="#" target="_blank">《网易隐私政策》</a></label>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                        </li>
+                        <li>
+                            <i></i> <a href="#">我的订单</a>
+                        </li>
+                        <li>
+                            <i></i> <a href="#">会员</a>
+                        </li>
+                        <li>
+                            <i></i> <a href="#">甄选家</a>
+                        </li>
+                        <li>
+                            <i></i> <a href="#">企业采购 <span class="glyphicon glyphicon-menu-down"></span></a>
+                            <!-- 二级导航 -->
+                            <div class="subnav-t">
+                                <em></em>
+                                <a href="#">企业购</a>
+                                <a href="#">礼品卡</a>
+                                <a href="#">联系我们</a>
+                            </div>
+                        </li>
+                        <li> <i></i>
+                            <a href="#">客服服务<span class="glyphicon glyphicon-menu-down"></span></a>
+                            <!-- 二级导航 -->
+                            <div class="subnav-t">
+                                <em></em>
+                                <a href="#">在线客服</a>
+                                <a href="#">帮助中心</a>
+                                <a href="#">商务合作</a>
+                                <a href="#">开放平台</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i></i>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-phone white-app"></span> APP</a>
+                            <!-- 二级导航 -->
+                            <div class="subnav-t">
+                                <em></em>
+                                <img src="../img/app.png" alt="app download's QR code">
+                                <b>下载领1000元新人礼包</b>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 头部中间搜索框导航 -->
+        <div class="search-nav">
+            <div class="wrapper">
+                <div class="left-sn">
+                    <a href="#" title="网易严选"></a>
+                </div>
+                <div class="right-sn">
+                    <div class="search-content">
+                        <i class="glyphicon glyphicon-search
+                        "></i>
+                        <input type="text" placeholder="search">
+                        <input type="submit" value="搜索">
+                    </div>
+                    <div class="shooping-car">
+                        <span>购物车</span>
+                        <b>0</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 头部各个页面的导航 -->
+        <div class="head-nav">
+            <div class="wrapper">
+                <ul class="list-h">
+
+                    <li class="active">
+                        <a href="#" title="首页">首页</a>
+                    </li>
+                    <li>
+                        <a href="productList.html" title="居家生活">居家生活</a>
+                        <!-- 二级导航 -->
+                        <div class="subnav-h">
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" title="服饰鞋包">服饰鞋包</a>
+                        <div class="subnav-h"></div>
+                    </li>
+                    <li>
+                        <a href="#" title="美食酒水">美食酒水</a>
+                        <div class="subnav-h"></div>
+
+                    </li>
+                    <li>
+                        <a href="#" title="个护清洁">个护清洁</a>
+                        <div class="subnav-h"></div>
+
+                    </li>
+                    <li>
+                        <a href="#" title="母婴亲子">母婴亲子</a>
+                        <div class="subnav-h"></div>
+
+                    </li>
+                    <li>
+                        <a href="#" title="运动旅行">运动旅行</a>
+                        <div class="subnav-h"></div>
+
+                    </li>
+                    <li>
+                        <a href="#" title="数码家电">数码家电</a>
+                        <div class="subnav-h"></div>
+
+                    </li>
+                    <li>
+                        <a href="#" title="全球特色">全球特色</a>
+                        <b>|</b>
+                    </li>
+
+                    <li>
+
+                        <a href="#" title="为你严选">为你严选</a>
+                    </li>
+                    <li>
+                        <a href="#" title="众筹">众筹</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+    <section id="main">
+        <!-- 首页 banner start-->
+        <div id="banner">
+            <div class="slider-w">
+                <div class="slider-b">
+                </div>
+                <span>&lt;</span>
+                <span>&gt;</span>
+                <!-- 小圆点 -->
+                <ul class="slider-cl">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 品牌制造商 -->
+        <div class="m-menufactures">
+            <div class="m-wrapper">
+                <div class="m-title">
+                    <div class="title-l">
+                        <h2>
+                            <a href="">品牌制造商 </a>
+
+                        </h2>
+                        <span>
+                                        工厂直达消费者，剔除品牌溢价
+                                </span>
+                    </div>
+                    <div class="title-r">
+                        <a href="">更多制造商<span>>></span></a>
+                    </div>
+                </div>
+                <ul class="m-content-list">
+                    <li class="large">
+                        <a href="" target="_blank">
+
+                            <div> <span>新秀丽制造商</span></div>
+                            <div> <b>34.9元起</b></div>
+
+                            <img src="../img/f1.png" alt="新秀丽制造商" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                        </a>
+                    </li>
+                    <li class="large">
+                        <a href="" target="_blank">
+                            <div>
+
+                                <span>海外制造商</span> <span class="new">上新</span>
+                            </div>
+                            <div>
+
+                                <b>9.9元起</b>
+                            </div>
+                            <img src="../img/f2.png" alt="海外制造商" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                        </a>
+                    </li>
+                    <li class="small">
+                        <a href="" target="_blank">
+                            <div>
+
+                                <span>CK制造商</span>
+                            </div>
+                            <div>
+
+                                <b>29.9元起</b>
+                            </div>
+                            <img src="../img/f3.png" alt="CK制造商" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                        </a>
+                        <a href="" target="_blank">
+                            <div>
+                                <span>Nine West制造商</span>
+                            </div>
+                            <div>
+                                <b>219元起</b>
+                            </div>
+                            <img src="../img/f4.png" alt="Nine West制造商" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-newProduct">
+            <div class="m-wrapper">
+                <div class="m-title">
+                    <div class="title-l">
+                        <h2>
+                            <a href="">新品首发 </a>
+
+                        </h2>
+                        <span>
+                                为你寻觅世间好物
+                                            </span>
+                    </div>
+                    <div class="title-r">
+                        <a href="">更多新品<span>>></span></a>
+                    </div>
+                </div>
+                <ul class="m-content-list">
+                    <li>
+                        <a href="" target="_blank">
+
+
+                            <div> <span>日式和风电蚊拍</span></div>
+                            <div> <b>￥85</b></div>
+                            <img src="../img/w1.jpg" alt="日式和风电蚊拍" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                            <img src="../img/618a.png" alt="618网易严选" class="log618a">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+
+
+                            <div> <span>日式和风电蚊拍</span></div>
+                            <div> <b>￥85</b></div>
+                            <img src="../img/w1.jpg" alt="日式和风电蚊拍" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                            <img src="../img/618a.png" alt="618网易严选" class="log618a">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+
+
+                            <div> <span>日式和风电蚊拍</span></div>
+                            <div> <b>￥85</b></div>
+                            <img src="../img/w1.jpg" alt="日式和风电蚊拍" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                            <img src="../img/618a.png" alt="618网易严选" class="log618a">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+
+
+                            <div>
+                                <span>日式和风电蚊拍</span>
+                            </div>
+                            <div>
+                                <b>￥85</b>
+                            </div>
+                            <img src="../img/w1.jpg" alt="日式和风电蚊拍" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                            <img src="../img/618a.png" alt="618网易严选" class="log618a">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <!-- 人气推荐    -->
+        <div class="m-hotProduct">
+            <div class="m-wrapper">
+                <div class="m-title">
+                    <div class="title-l">
+                        <h2>
+                            <a href="">人气推荐 </a>
+
+                        </h2>
+                        <ul class="title-list">
+                            <li class="active">
+                                <a href="">编辑推荐</a>
+                            </li>
+                            <li>
+                                <a href="">热销总榜</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="title-r">
+                        <a href="">更多推荐<span>>></span></a>
+                    </div>
+                </div>
+                <ul class="m-content-list">
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage">
+                                    <span>定金购</span>
+                                </div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <div class="list-pic">
+                                <img src="../img/8c.png" alt="AB面独立弹簧床垫 进口乳胶" class="lazy" data-original="img/bmw_m1_hood.jpg">
+                                <img src="../img/618a.png" alt="618网易严选" class="log618a">
+
+                            </div>
+                            <div class="list-con">
+                                <div class="conTage"></div>
+                                <div class="name"> <span>AB面独立弹簧床垫 进口乳胶</span></div>
+                                <div class="price"> <b>￥85</b></div>
+                            </div>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- 限时购 -->
+        <div class="m-timeLimited">
+            <div class="m-wrapper">
+                <div class="m-title">
+                    <div class="title-l">
+                        <h2>
+                            <a href="">限时购</a>
+
+                        </h2>
+
+                    </div>
+                    <div class="title-r">
+                        <a href="">更多推荐<span>>></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- 首页 end-->
+
+    <footer>
+        <div class="ft1">
+            <div class="wrapper">
+                <ul class="f1-list">
+                    <li class="item0">
+                        <h4>客服服务</h4>
+                        <a href="">
+                            <i></i>
+
+                            <span>在线客服</span>
+                        </a>
+                        <a href="">
+                            <i></i>
+
+                            <span>用户反馈</span>
+                        </a>
+                    </li>
+                    <li class="item1">
+                        <h4>何为严选</h4>
+                        <p>网易原创生活类电商品牌，秉承网易一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到优质的商品</p>
+                        <div class="f1-followUs">
+                            <span>关注我们：</span>
+                            <ul class="fU-list">
+                                <li>
+                                    <i></i>
+                                    <div class="subnav">
+                                        <em></em>
+                                        <img src="../img/fU1.png" alt="严选易信">
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+                                    <div class="subnav">
+                                        <em></em>
+                                        <img src="../img/fU1.png" alt="严选易信">
+                                    </div>
+                                </li>
+                                <li>
+                                    <i></i>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item2">
+                        <h4>扫码下载严选APP</h4>
+                        <div>
+                            <img src="../img/app.png" alt="app download's QR code">
+                            <b>下载领1000元新人礼包</b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft2">
+            <div class="wrapper">
+                <div class="ft2-con">
+                    <ul class="ft2-listF">
+                        <li class="item0">
+                            <i></i> 网易自营电商
+                        </li>
+                        <li class="item1">
+                            <i></i>30天无忧退换货
+                        </li>
+                        <li class="item2">
+                            <i></i>满88元免邮费
+                        </li>
+                        <li class="item3">
+                            <i></i>品质保证
+                        </li>
+                    </ul>
+                    <ul class="ft2-listA">
+                        <li>
+                            <a href="">关于我们</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">帮助中心</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">售后服务</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">配送与验收</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">企业采购</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">开放平台</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">搜索推荐</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">友情链接</a>
+                            <b>|</b>
+                        </li>
+                        <li>
+                            <a href="">商务合作</a>
+
+                        </li>
+                    </ul>
+                    <p class="f2-inf">
+                        <a href="">食品经营许可证：JY13301080111719</a>
+                        <a href="">出版物经营许可证：新出发滨字第0132号</a>
+                        <span>妙得ICP证号：ICP&nbsp;证浙B2-20160106</span>
+                        <a href="">第二类医疗器械经营备案</a>
+                        <a href="">营业执照</a>
+                        <span>网易公司版权所有 © 1997-</span>
+                        <b>2019</b>
+                    </p>
+
+                    <p class="f2-police"> <span>（粤）网械平台备字（2019）第00004号</span>
+                        <span><a target="_blank" href="//yanxuan.nosdn.127.net/d678ac17014b97f97d25bb86ae288af2.jpg?imageView">单用途商业预付卡备案证：330100AAC0024</a>
+                            <a  href="http://idinfo.zjaic.gov.cn/bscx.do?method=hddoc&amp;id=33010800002352" target="_blank" >
+                                <img src="../img/86f32b668af6e537389a77480fb5c74d.gif" alt="police">
+                            </a>
+                            </span></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../bootstrap.js "></script>
+<script src="../js/head.js"></script>
+<script src="../js/ban.js"></script>
+<script>
+    $(function() {
+        $('.slider-w').slider();
+
+    })
+</script>
+
+<!-- 模态框登录和注册的获取 -->
+<script>
+    $('.list-login').first().on('click', function() {
+        $('body').load('./login.html');
+    });
+
+
+    $('.list-login').last().on('click', function() {
+        $('body').load('./login.html');
+    });
+</script>
+<!-- 首页的js -->
+<script src="../js/yoo-HomePage.js"></script>
+
+<!-- <script>
+</script> -->
+
+</html>

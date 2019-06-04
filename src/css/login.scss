@@ -1,0 +1,179 @@
+@charset 'utf-8';
+.modal-content {
+    height: 456px;
+    width: 384px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    a {
+        color: #999;
+    }
+    .close {
+        font-size: 45px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        font-weight: 400
+    }
+    h4 {
+        display: inline-block;
+        padding: 0 33px;
+        margin-bottom: 10px;
+        a:hover {
+            text-decoration: none;
+        }
+        &:nth-of-type(1) {
+            border-right: 1px solid #ccc;
+        }
+        &:nth-of-type(2) {
+            a:hover {
+                color: #b4a078;
+            }
+        }
+        &.active {
+            a {
+                color: #333;
+            }
+        }
+        &.active-i:nth-of-type(1) {
+            padding-left: 0;
+            border-right: none;
+        }
+        &.active-i:nth-of-type(2) {
+            padding: 0 0 0 52px;
+            a {
+                font-size: 12px;
+                &:nth-of-type(1) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .l-conform,
+    .u-todo,
+    .l-form,
+    .fQues {
+        display: none;
+    }
+    .l-conform {
+        .u-todo {
+            float: right;
+            color: #666;
+            &:hover {
+                color: #b4a078;
+                text-decoration: none;
+            }
+        }
+        .l-form {
+            padding-top: 24px;
+            input {
+                height: 38px;
+                width: 300px;
+                margin-bottom: 16px;
+                &.btn-default {
+                    margin-top: 40px;
+                    height: 48px;
+                    background-color: #b4a078;
+                    color: #fff;
+                }
+            }
+            div {
+                position: relative;
+                &.name-l {
+                    input {
+                        padding-left: 36px;
+                    }
+                    i {
+                        display: block;
+                        position: absolute;
+                        height: 24px;
+                        width: 29px;
+                        left: 9px;
+                        top: 8px;
+                        color: #ccc;
+                        border-right: 1px solid #ccc;
+                        font-size: 22px;
+                    }
+                }
+                &.pic-l {
+                    div {
+                        width: 40px;
+                        height: 38px;
+                        position: absolute;
+                        text-align: center;
+                        line-height: 36px;
+                        font-size: 1em;
+                        font-weight: 400;
+                        background-color: #fff;
+                        box-shadow: 0 0 3px rgba(0, 0, 0, .3)
+                    }
+                    input {
+                        padding-left: 120px;
+                    }
+                }
+                &.psw-l {
+                    .getms {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 38px;
+                        a {
+                            color: #333;
+                            &:hover {
+                                color: #b4a078;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fList {
+        float: left;
+        margin-right: 35px;
+        a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: url(../img/dc6.png) no-repeat -6px -2px/140%;
+            &:nth-of-type(2) {
+                background-position: -4px -234px;
+            }
+            &:nth-of-type(3) {
+                background-position: -6px -115.5px;
+            }
+            &:nth-of-type(4) {
+                background-position: -4px -77px;
+            }
+            &:nth-child(1):hover {
+                background-position: -6px -39px;
+            }
+            &:nth-child(2):hover {
+                background-position: -4px -276px;
+            }
+            &:nth-child(3):hover {
+                background-position: -6px -192px;
+            }
+            &:nth-child(4):hover {
+                background-position: -4px -153px;
+            }
+        }
+    }
+    .fQues {
+        .agree {
+            width: 14px;
+            height: 14px;
+        }
+        label {
+            color: #999;
+            a:hover {
+                text-decoration: none;
+                color: #666;
+            }
+        }
+    }
+    .show {
+        display: block;
+    }
+}
